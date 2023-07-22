@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/guest', (req, res) => {
     const num = Math.floor(Math.random() * 10);
-    const guessedNum = req.query.num || 0;
+    const guessedNum = parseInt(req.query.num) || 0;
 
     res.send({
         "number": num,
